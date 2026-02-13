@@ -4,6 +4,16 @@ const noMessages = [
   "One more chance? I promise endless cuddles and smiles. 🌹",
   "I’ll keep asking with all my love... please say yes! 💞",
   "You can press no forever... and I’ll still choose you forever. ✨",
+  "Aww… maybe your heart just needs a little more convincing. 💓✨",
+"Say no softly… my heart still hears a maybe. 🥺💕",
+"I’ll keep knocking gently… one day you’ll open with a smile. 🌸💞",
+"If patience wins hearts, I’m ready to win yours. ⏳💖",
+"You can hesitate now… I’ll still adore you the same. 🥰🌹",
+"My feelings aren’t in a hurry… they’re here to stay. 💘🌙",
+"Even your silence feels sweet to me. ✨💓",
+"I’ll keep choosing you… even when you pretend not to choose me. 😌💕",
+"Your ‘no’ just makes my ‘yes’ stronger. 💖🔥",
+"Take your time, my heart isn’t going anywhere. 💞🌸",
 ];
 
 const noButtonLabels = ["No 🙈", "Really no? 😶", "Still no? 🥲", "Think again? 😘", "Nope? 💔"];
