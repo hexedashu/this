@@ -1,0 +1,187 @@
+:root {
+  --pink: #ff5ea2;
+  --deep-pink: #ff2f86;
+  --purple: #8f56ff;
+  --bg1: #ffd3e7;
+  --bg2: #fcb6d9;
+  --bg3: #e6b3ff;
+  --white: #fff;
+  --shadow: 0 20px 40px rgba(134, 35, 88, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
+  background-size: 300% 300%;
+  animation: dreamyBg 12s ease infinite;
+  color: #4b1841;
+  overflow: hidden;
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.98);
+  transition: opacity 500ms ease, transform 500ms ease;
+  padding: 1rem;
+}
+
+.page.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.card {
+  width: min(92vw, 650px);
+  border-radius: 30px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Great Vibes", cursive;
+  color: #c51d72;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 7vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+.subtitle,
+.card p {
+  margin: 1rem auto 1.3rem;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  max-width: 48ch;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 5;
+}
+
+.btn {
+  border: none;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  z-index: 6;
+  transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  filter: brightness(1.05);
+}
+
+.yes {
+  color: var(--white);
+  background: linear-gradient(120deg, var(--deep-pink), var(--pink));
+  box-shadow: 0 8px 20px rgba(255, 47, 134, 0.35);
+}
+
+.no {
+  color: #6a2760;
+  background: #ffd9ec;
+}
+
+.no.wiggle {
+  animation: wiggle 300ms ease;
+}
+
+.celebration {
+  animation: popIn 600ms ease;
+}
+
+.signature {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  margin-top: 0.6rem;
+  color: #d32b7d;
+}
+
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: -60px;
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: floatUp linear forwards;
+}
+
+@keyframes dreamyBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-115vh) scale(1.25) rotate(14deg);
+    opacity: 0;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
